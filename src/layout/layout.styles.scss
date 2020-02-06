@@ -10,9 +10,10 @@ body {
 }
 
 .container {
-  background: lightgrey;
+  
   margin: 20px auto;
   padding: 10px;
+  height: 100vh;
 
   display: grid;
   grid-template-rows: 6rem min-content;

@@ -1,3 +1,24 @@
+@import "../../sass/variables";
+
 .navigation {
   grid-row: 2 / 8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: $secondary-color;
+  &__item {
+    text-decoration: none;
+    padding: 0.5rem 1.9rem;
+    margin: 0.5rem 0;
+
+    &--active {
+      border-left: 3px solid #21bf73;
+    }
+    &--icon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }

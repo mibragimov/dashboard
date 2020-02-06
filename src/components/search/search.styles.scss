@@ -1,3 +1,4 @@
-.search {
-  grid-column: sidebar-end / full-end;
+@import "../../sass/variables";
+.search__input {
+  width: 28vw;
 }

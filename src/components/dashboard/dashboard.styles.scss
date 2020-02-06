@@ -1,0 +1,25 @@
+@import "../../sass/variables";
+
+.dashboard {
+  grid-column: sidebar-end / full-end;
+  background-color: #fff;
+
+  display: grid;
+  grid-template-columns: 12rem repeat(4, 1fr);
+  align-items: center;
+  padding: 0 0 1rem 1rem;
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    justify-self: start;
+  }
+  &__box {
+    grid-column: 2 / 6;
+    background-color: $tertiary-color;
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+    border-left: 1px solid rgba($extra-color, 0.7);
+    border-bottom: 1px solid rgba($extra-color, 0.7);
+  }
+}
