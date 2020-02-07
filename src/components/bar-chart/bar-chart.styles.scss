@@ -1,3 +1,11 @@
+@import "../../sass/variables";
+
 .bar-chart {
   grid-column: full-start / col-end 4;
+  border-top: $border;
+  border-bottom: $border;
+
+  &__data {
+    padding-top: 1rem;
+  }
 }

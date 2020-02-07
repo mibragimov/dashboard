@@ -1,4 +1,8 @@
-* {
+@import "../sass/variables";
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,11 +10,16 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  color: $primary-font-color-1;
 }
 
+h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
 .container {
-  
   margin: 20px auto;
   padding: 10px;
   height: 100vh;
@@ -26,7 +35,7 @@ body {
   grid-gap: 10px;
 
   & > * {
-    background: teal;
-    padding: 10px;
+    background: $tertiary-color;
+    padding: 1rem;
   }
 }

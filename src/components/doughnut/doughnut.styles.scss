@@ -1,3 +1,12 @@
+@import "../../sass/variables";
+
 .doughnut {
   grid-column: col-end 4 / full-end;
+  border-top: $border;
+  border-bottom: $border;
+  border-left: $border;
+
+  &__data {
+    padding-top: 1rem;
+  }
 }

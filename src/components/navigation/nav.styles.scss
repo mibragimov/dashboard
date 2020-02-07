@@ -5,7 +5,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   background-color: $secondary-color;
   &__item {
@@ -14,7 +14,7 @@
     margin: 0.5rem 0;
 
     &--active {
-      border-left: 3px solid #21bf73;
+      border-left: 3px solid $extra-color-2;
     }
     &--icon {
       width: 2rem;
