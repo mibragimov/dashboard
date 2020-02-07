@@ -1,3 +1,14 @@
+@import "../../sass/variables";
+
 .activity {
   grid-column: col-end 4 / full-end;
+  border-top: $border;
+  border-bottom: $border;
+  border-left: $border;
+  &__data {
+    padding-top: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
 }

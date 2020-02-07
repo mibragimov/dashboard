@@ -1,3 +1,8 @@
 .users {
   grid-column: full-start / col-end 4;
+
+  &__form {
+    padding-top: 1rem;
+    padding-block-start: 1rem;
+  }
 }

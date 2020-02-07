@@ -1,11 +1,32 @@
 import React from "react";
 
 import bellIcon from "icons/icon-bell.svg";
-import profilePicture from "images/member-2.jpg";
 
 import "components/header/header.styles.scss";
 
-export default function Header() {
+export default function Header({ users }) {
+  const renderUser = () => {
+    if (users.length) {
+      const activeUser = users.filter((user, index) => index === 7);
+      const activeUserName =
+        activeUser[0].name.first + " " + activeUser[0].name.last;
+      const activeUserPicture = activeUser[0].picture.medium;
+
+      return (
+        <div className="header__profile">
+          <img
+            src={activeUserPicture}
+            alt="profile"
+            className="header__profile--img"
+          />
+          <h6 className="header__profile--title">{activeUserName}</h6>
+        </div>
+      );
+    } else {
+      return <div>Signing in...</div>;
+    }
+  };
+
   return (
     <header className="header">
       <h1 className="header__brand">
@@ -15,14 +36,7 @@ export default function Header() {
 
       <img src={bellIcon} alt="bell" className="header__icon" />
 
-      <div className="header__profile">
-        <img
-          src={profilePicture}
-          alt="profile"
-          className="header__profile--img"
-        />
-        <h6 className="header__profile--title">Josh Sullivan</h6>
-      </div>
+      {renderUser()}
     </header>
   );
 }

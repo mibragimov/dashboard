@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Layout from "layout/layout.component";
 import Header from "components/header/header.component";
 import Navigation from "components/navigation/nav.component";
@@ -13,17 +14,37 @@ import Settings from "components/settings/settings.component";
 import Dashboard from "components/dashboard/dashboard.component";
 
 const App = () => {
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://randomuser.me/api/?results=10&inc=name,email,picture,registered,id&nat=us"
+      );
+
+      setUsers(response.data.results);
+    } catch (error) {
+      setError(error);
+    }
+  };
+  console.log(users);
+
   return (
     <Layout>
-      <Header />
+      <Header users={users} />
       <Navigation />
       <Dashboard />
       <LineChart />
       <BarChart />
       <Doughnut />
       <Social />
-      <Members />
-      <Activity />
+      <Members users={users} />
+      <Activity users={users} />
       <Users />
       <Settings />
     </Layout>

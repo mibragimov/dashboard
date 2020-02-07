@@ -1,3 +1,10 @@
+@import "../../sass/variables";
+
 .settings {
   grid-column: col-end 4 / full-end;
+  border-left: $border;
+
+  &__form {
+    padding: 1rem 0;
+  }
 }
