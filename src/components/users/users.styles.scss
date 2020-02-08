@@ -11,6 +11,10 @@
     grid-row: 3 / -1;
     align-self: end;
   }
+
+  @media (max-width: 768px) {
+    grid-column: 1 /-1;
+  }
 }
 
 #users__form--btn {

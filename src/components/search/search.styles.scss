@@ -1,4 +1,8 @@
 @import "../../sass/variables";
 .search__input {
   width: 28vw;
+
+  @media (max-width: 768px) {
+    width: 50vw;
+  }
 }

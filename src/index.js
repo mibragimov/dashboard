@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "components/app/app.component";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="dashboard">
     <App />
   </BrowserRouter>,
   document.querySelector("#root")

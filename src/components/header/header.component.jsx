@@ -1,11 +1,28 @@
-import React from "react";
-import { Label } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Label, Popup } from "semantic-ui-react";
 
 import bellIcon from "icons/icon-bell.svg";
 
 import "components/header/header.styles.scss";
 
 export default function Header({ users }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  let timeout;
+
+  const handleOpen = () => {
+    setIsOpen(true);
+
+    timeout = setTimeout(() => {
+      setIsOpen(false);
+    }, 4000);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+    clearTimeout(timeout);
+  };
+
   const renderUser = () => {
     if (users.length) {
       const activeUser = users.filter((user, index) => index === 7);
@@ -35,15 +52,28 @@ export default function Header({ users }) {
         <sup className="header__brand--extra">TM</sup>
       </h1>
       <div className="header__notification">
-        <img src={bellIcon} alt="bell" className="header__notification--icon" />
         <Label
           floating
           size="small"
           circular
           className="header__notification--label"
-        >
-          3
-        </Label>
+          content="3"
+        />
+        <Popup
+          trigger={
+            <img
+              src={bellIcon}
+              alt="bell"
+              className="header__notification--icon"
+            />
+          }
+          content="You have 3 unread messages"
+          on="click"
+          position="bottom right"
+          open={isOpen}
+          onClose={handleClose}
+          onOpen={handleOpen}
+        />
       </div>
       {renderUser()}
     </header>

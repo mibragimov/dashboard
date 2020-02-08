@@ -6,7 +6,8 @@
   display: grid;
   grid-template-columns: 12rem repeat(4, 1fr);
   align-items: center;
-  padding: 0 0 1rem 1rem;
+  padding-top: 0;
+  padding-right: 0;
 
   &__title {
     font-size: 1.4rem;
@@ -19,15 +20,19 @@
     background-color: $tertiary-color;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
+    padding: 1rem 2rem 1rem 1rem;
     border-left: $border;
     border-bottom: $border;
   }
   &__alert {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    padding: 1rem 1rem 1rem 0;
-    
+    padding: 1rem 2rem 1rem 0;
+  }
 
+  @media (max-width: 768px) {
+    grid-column: 1 / -1;
+
+    grid-template-columns: 8rem repeat(4, 1fr);
   }
 }

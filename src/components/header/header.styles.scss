@@ -8,13 +8,16 @@
   align-items: center;
   background-color: $primary-color;
   color: $primary-font-color;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   &__brand {
     font-size: 1.5rem;
+    font-weight: 700;
 
     &--span,
     &--extra {
-      font-weight: 300;
+      font-weight: 300 !important;
     }
     &--extra {
       font-size: 0.7rem;
@@ -44,7 +47,7 @@
     display: flex;
     align-items: center;
     border-left: 1.5px solid rgba($secondary-color, 0.8);
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
 
     &--img {
       width: 4rem;
@@ -55,6 +58,7 @@
     &--title {
       font-size: 1rem;
       font-weight: 300;
+      padding-left: 0.5rem;
     }
   }
 }

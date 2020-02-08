@@ -109,7 +109,7 @@ export default class LineChart extends React.Component {
           <Line
             data={chartData}
             width={100}
-            height={30}
+            height={25}
             options={{
               legend: { hidden: true, display: false },
               tooltips: { enabled: false },

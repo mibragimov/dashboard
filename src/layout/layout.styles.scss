@@ -11,6 +11,8 @@
 body {
   font-family: "Roboto", sans-serif;
   color: $primary-font-color-1;
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
 h3 {
@@ -34,7 +36,8 @@ h3 {
 
   & > * {
     background: $tertiary-color;
-    padding: 1rem;
+
+    padding: 2rem;
   }
 }
 

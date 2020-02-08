@@ -8,4 +8,8 @@
   &__data {
     padding-top: 1rem;
   }
+
+  @media (max-width: 768px) {
+    grid-column: 1 / -1;
+  }
 }
