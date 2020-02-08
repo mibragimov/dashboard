@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/dashboard/static/css/main.44f92fe6.chunk.css",
+    "main.js": "/dashboard/static/js/main.4c9a32b0.chunk.js",
+    "main.js.map": "/dashboard/static/js/main.4c9a32b0.chunk.js.map",
+    "runtime-main.js": "/dashboard/static/js/runtime-main.75375fc5.js",
+    "runtime-main.js.map": "/dashboard/static/js/runtime-main.75375fc5.js.map",
+    "static/js/2.39e2e313.chunk.js": "/dashboard/static/js/2.39e2e313.chunk.js",
+    "static/js/2.39e2e313.chunk.js.map": "/dashboard/static/js/2.39e2e313.chunk.js.map",
+    "index.html": "/dashboard/index.html",
+    "precache-manifest.055f42828f1646ad488a446e5685e742.js": "/dashboard/precache-manifest.055f42828f1646ad488a446e5685e742.js",
+    "service-worker.js": "/dashboard/service-worker.js",
+    "static/css/main.44f92fe6.chunk.css.map": "/dashboard/static/css/main.44f92fe6.chunk.css.map",
+    "static/js/2.39e2e313.chunk.js.LICENSE.txt": "/dashboard/static/js/2.39e2e313.chunk.js.LICENSE.txt",
+    "static/media/icon-bell.svg": "/dashboard/static/media/icon-bell.a1b78de6.svg",
+    "static/media/icon-dashboard.svg": "/dashboard/static/media/icon-dashboard.6e9bdcd2.svg",
+    "static/media/icon-members.svg": "/dashboard/static/media/icon-members.a7fdf16a.svg",
+    "static/media/icon-settings.svg": "/dashboard/static/media/icon-settings.3df5f6f4.svg",
+    "static/media/icon-visits.svg": "/dashboard/static/media/icon-visits.9da17580.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75375fc5.js",
+    "static/js/2.39e2e313.chunk.js",
+    "static/css/main.44f92fe6.chunk.css",
+    "static/js/main.4c9a32b0.chunk.js"
+  ]
+}
