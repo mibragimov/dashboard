@@ -1,4 +1,5 @@
 import React from "react";
+import { Label } from "semantic-ui-react";
 
 import bellIcon from "icons/icon-bell.svg";
 
@@ -23,7 +24,7 @@ export default function Header({ users }) {
         </div>
       );
     } else {
-      return <div>Signing in...</div>;
+      return <div>Logging in...</div>;
     }
   };
 
@@ -33,9 +34,17 @@ export default function Header({ users }) {
         Your<span className="header__brand--span">App</span>
         <sup className="header__brand--extra">TM</sup>
       </h1>
-
-      <img src={bellIcon} alt="bell" className="header__icon" />
-
+      <div className="header__notification">
+        <img src={bellIcon} alt="bell" className="header__notification--icon" />
+        <Label
+          floating
+          size="small"
+          circular
+          className="header__notification--label"
+        >
+          3
+        </Label>
+      </div>
       {renderUser()}
     </header>
   );

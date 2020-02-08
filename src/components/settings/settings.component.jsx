@@ -4,9 +4,13 @@ import { Form } from "semantic-ui-react";
 import "components/settings/settings.styles.scss";
 
 const options = [
-  { key: "m", text: "Male", value: "male" },
-  { key: "f", text: "Female", value: "female" },
-  { key: "o", text: "Other", value: "other" }
+  { key: "1", text: "(GMT-12:00) International Date Line West", value: "-12" },
+  { key: "2", text: "(GMT-08:00) Pacific Time (US & Canada)", value: "-8" },
+  {
+    key: "3",
+    text: "(GMT+03:00) Moscow, St. Petersburg, Volgograd",
+    value: "+3"
+  }
 ];
 
 export default function Settings() {
@@ -16,15 +20,19 @@ export default function Settings() {
 
       <div className="settings__form">
         <Form>
-          <Form.Checkbox toggle label="Send Email Notifications" />
+          <Form.Checkbox
+            toggle
+            label="Send Email Notifications"
+            id="settings__form--checkbox"
+          />
 
           <Form.Checkbox toggle label="Set Profile To Public" />
           <Form.Select options={options} placeholder="Select Timezone" />
           <Form.Group widths="equal">
-            <Form.Button fluid className="setting__form--btn-1">
+            <Form.Button fluid id="setting__form--btn-1">
               Save
             </Form.Button>
-            <Form.Button fluid className="setting__form--btn-2">
+            <Form.Button fluid id="setting__form--btn-2">
               Cancel
             </Form.Button>
           </Form.Group>

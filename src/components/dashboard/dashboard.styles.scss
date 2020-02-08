@@ -23,4 +23,11 @@
     border-left: $border;
     border-bottom: $border;
   }
+  &__alert {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding: 1rem 1rem 1rem 0;
+    
+
+  }
 }

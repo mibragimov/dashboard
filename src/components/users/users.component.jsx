@@ -15,7 +15,9 @@ export default function Users() {
           </Form.Group>
           <Form.TextArea placeholder="Message for User" />
 
-          <Form.Button fluid>Send</Form.Button>
+          <Form.Button fluid id="users__form--btn">
+            Send
+          </Form.Button>
         </Form>
       </div>
     </div>

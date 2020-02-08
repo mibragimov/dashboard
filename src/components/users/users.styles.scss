@@ -1,8 +1,20 @@
+@import "../../sass/variables";
+
 .users {
   grid-column: full-start / col-end 4;
+  display: grid;
+  grid-template-rows: min-content 1rem 1fr;
 
   &__form {
-    padding-top: 1rem;
+    padding: 1rem 0;
     padding-block-start: 1rem;
+    grid-row: 3 / -1;
+    align-self: end;
   }
+}
+
+#users__form--btn {
+  background-color: $primary-color;
+  color: $primary-font-color;
+  text-transform: uppercase;
 }

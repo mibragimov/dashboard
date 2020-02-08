@@ -3,8 +3,24 @@
 .settings {
   grid-column: col-end 4 / full-end;
   border-left: $border;
+  display: grid;
+  grid-template-rows: min-content 1rem 2rem 1fr;
 
   &__form {
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
+    grid-row: 4 / -1;
+    align-self: end;
   }
+}
+
+#setting__form--btn-1 {
+  background-color: $primary-color;
+  color: $primary-font-color;
+  text-transform: uppercase;
+}
+
+#setting__form--btn-2 {
+  background-color: $extra-color;
+  color: $primary-font-color;
+  text-transform: uppercase;
 }

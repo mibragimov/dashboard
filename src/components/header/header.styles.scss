@@ -21,13 +21,19 @@
     }
   }
 
-  &__icon {
-    width: 2rem;
-    height: 2rem;
+  &__notification {
+    position: relative;
+    width: 2.2rem;
+    height: 2.2rem;
     grid-column: 4 /5;
     justify-self: center;
     cursor: pointer;
     transition: animation ease-out;
+
+    &--label {
+      background-color: $extra-color-2 !important;
+      color: $primary-font-color !important;
+    }
 
     &:hover {
       animation: swing 1s ease-out;
