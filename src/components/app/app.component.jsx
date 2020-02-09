@@ -24,7 +24,7 @@ const App = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://randomuser.me/api/?results=10&inc=name,email,picture,registered,id&nat=us"
+        "https://randomuser.me/api/?results=10&inc=name,email,picture,location,registered,id&nat=us"
       );
 
       setUsers(response.data.results);
@@ -32,20 +32,19 @@ const App = () => {
       setError(error);
     }
   };
-  console.log(users);
 
   return (
     <Layout>
       <Header users={users} />
       <Navigation />
-      <Dashboard />
+      <Dashboard users={users} error={error} />
       <LineChart />
       <BarChart />
       <Doughnut />
       <Social />
       <Members users={users} />
       <Activity users={users} />
-      <Users />
+      <Users users={users} search />
       <Settings />
     </Layout>
   );
