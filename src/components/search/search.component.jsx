@@ -77,7 +77,7 @@ export default class Search extends React.Component {
 
   render() {
     const { isLoading, term } = this.state;
-    const { icon, placeholder, dashboard } = this.props;
+    const { icon, placeholder, dashboard, required } = this.props;
 
     return (
       <div className="search">
@@ -88,6 +88,7 @@ export default class Search extends React.Component {
           loading={isLoading}
           value={term}
           onChange={this.handleChange}
+          required={required}
         />
         <div className="search__results transition">{this.renderResults()}</div>
       </div>

@@ -21,4 +21,14 @@
   background-color: $primary-color;
   color: $primary-font-color;
   text-transform: uppercase;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+.ui.icon.header,
+.ui.inline.loader.active  {
+  background-color: initial;
+  color: initial;
 }
