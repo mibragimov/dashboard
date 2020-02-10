@@ -1,4 +1,5 @@
 import React from "react";
+
 import Search from "components/search/search.component";
 
 import "components/dashboard/dashboard.styles.scss";

@@ -1,6 +1,6 @@
 import React from "react";
 import _ from "lodash";
-import { Input, Icon, Image } from "semantic-ui-react";
+import { Input, Icon, Image, Transition } from "semantic-ui-react";
 import "components/search/search.styles.scss";
 
 const initialState = { isLoading: false, term: "", showResults: false };
@@ -94,11 +94,13 @@ export default class Search extends React.Component {
           onChange={this.handleChange}
           required={required}
         />
-        <div
-          className={`search__results ${showResults ? "overflow--auto" : ""}`}
-        >
-          {this.renderResults()}
-        </div>
+        <Transition visible={showResults} animation="drop">
+          <div
+            className={`search__results ${showResults ? "overflow--auto" : ""}`}
+          >
+            {this.renderResults()}
+          </div>
+        </Transition>
       </div>
     );
   }
