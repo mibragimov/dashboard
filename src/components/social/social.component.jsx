@@ -14,19 +14,21 @@ export default class Social extends React.Component {
     stats: initialStats
   };
 
-  // componentDidMount() {
-  //   this.timer = setInterval(() => {
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.setState(prevState => ({
+        stats: prevState.stats.map(stat => ({...stat, numbers: stat.numbers + Math.floor(Math.random() * 9)}))
+      }));
+    }, 1000);
+  }
 
-  //     this.setState(prevState => ({
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
 
-  //       stats: [...prevState.stats]
-  //     }));
-  //   }, 1000);
-  // }
-
-  // componentWillUnmount() {
-  //   clearInterval(this.timer);
-  // }
+  numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
   render() {
     const { stats } = this.state;
@@ -48,7 +50,7 @@ export default class Social extends React.Component {
                     {stat.name}
                   </h4>
                   <p className="social__data__stats--content--numbers">
-                    {stat.numbers}
+                    {this.numberWithCommas(stat.numbers)}
                   </p>
                 </div>
               </div>
