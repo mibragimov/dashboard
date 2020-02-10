@@ -25,15 +25,20 @@ export default function Settings() {
         id="settings__form--checkbox"
       />
 
-      <Form.Checkbox toggle label="Set Profile To Public" required/>
+      <Form.Checkbox toggle label="Set Profile To Public" required />
       <Form.Select options={options} placeholder="Select Timezone" required />
       <Form.Group widths="equal">
-        <Form.Button fluid id="setting__form--btn-1" onClick={(e) => handleSubmit(e)}>
-          Save
-        </Form.Button>
-        <Form.Button fluid id="setting__form--btn-2">
-          Cancel
-        </Form.Button>
+      <Form.Button
+        fluid
+        
+        id="setting__form--btn-1"
+        onClick={e => handleSubmit(e)}
+      >
+        Save
+      </Form.Button>
+      <Form.Button fluid  id="setting__form--btn-2">
+        Cancel
+      </Form.Button>
       </Form.Group>
     </Form>
   );
