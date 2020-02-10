@@ -17,3 +17,13 @@
     border-bottom: none;
   }
 }
+
+.members__data--text {
+  color: $primary-color !important;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}

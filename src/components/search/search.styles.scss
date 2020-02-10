@@ -18,7 +18,7 @@
 
 .search__results {
   position: absolute;
-  
+
   width: 100%;
   -webkit-transform-origin: center top;
   transform-origin: center top;
@@ -75,4 +75,14 @@
       }
     }
   }
+
+  &__no-results {
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+.overflow--auto {
+  overflow: auto;
+  height: 5.7rem;
 }

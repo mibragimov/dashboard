@@ -3,13 +3,13 @@ import _ from "lodash";
 import { Input, Icon, Image } from "semantic-ui-react";
 import "components/search/search.styles.scss";
 
-const initialState = { isLoading: false, term: "" };
+const initialState = { isLoading: false, term: "", showResults: false };
 
 export default class Search extends React.Component {
   state = initialState;
 
   handleChange = e => {
-    this.setState({ term: e.target.value, isLoading: true });
+    this.setState({ term: e.target.value, isLoading: true, showResults: true });
 
     setTimeout(() => {
       if (this.state.term.length < 1) return this.setState(initialState);
@@ -19,7 +19,7 @@ export default class Search extends React.Component {
   };
 
   handleResultSelect = (fName, lName) =>
-    this.setState({ term: fName + " " + lName + " " });
+    this.setState({ term: fName + " " + lName + " ", showResults: false });
 
   renderResults = () => {
     const { users } = this.props;
@@ -37,7 +37,11 @@ export default class Search extends React.Component {
       const results = _.filter(users, isMatch);
 
       if (results.length === 0 && term.indexOf(" ") === -1) {
-        return <div className="search__results__container">No Results</div>;
+        return (
+          <div className="search__results__no-results">
+            <Icon name="exclamation" /> No Results
+          </div>
+        );
       } else {
         return results.map(result => {
           return (
@@ -76,7 +80,7 @@ export default class Search extends React.Component {
   };
 
   render() {
-    const { isLoading, term } = this.state;
+    const { isLoading, term, showResults } = this.state;
     const { icon, placeholder, dashboard, required } = this.props;
 
     return (
@@ -90,7 +94,11 @@ export default class Search extends React.Component {
           onChange={this.handleChange}
           required={required}
         />
-        <div className="search__results transition">{this.renderResults()}</div>
+        <div
+          className={`search__results ${showResults ? "overflow--auto" : ""}`}
+        >
+          {this.renderResults()}
+        </div>
       </div>
     );
   }

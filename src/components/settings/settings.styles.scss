@@ -22,10 +22,21 @@
   background-color: $primary-color;
   color: $primary-font-color;
   text-transform: uppercase;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 #setting__form--btn-2 {
   background-color: $extra-color;
   color: $primary-font-color;
   text-transform: uppercase;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.ui.toggle.checkbox .box, .ui.toggle.checkbox label  {
+  color: $primary-font-color-1;
+ 
 }

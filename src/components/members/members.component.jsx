@@ -19,7 +19,9 @@ export default function Members({ users }) {
             <Comment.Metadata>
               <div>{moment(member.registered.date).format("L")}</div>
             </Comment.Metadata>
-            <Comment.Text>{member.email}</Comment.Text>
+            <Comment.Text className="members__data--text">
+              {member.email}
+            </Comment.Text>
           </Comment.Content>
         </Comment>
       );

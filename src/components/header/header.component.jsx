@@ -7,6 +7,7 @@ import "components/header/header.styles.scss";
 
 export default function Header({ users }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [label, setLabel] = useState(true);
 
   let timeout;
 
@@ -15,11 +16,13 @@ export default function Header({ users }) {
 
     timeout = setTimeout(() => {
       setIsOpen(false);
+      setLabel(true);
     }, 4000);
   };
 
   const handleClose = () => {
     setIsOpen(false);
+    setLabel(false);
     clearTimeout(timeout);
   };
 
@@ -52,13 +55,15 @@ export default function Header({ users }) {
         <sup className="header__brand--extra">TM</sup>
       </h1>
       <div className="header__notification">
-        <Label
-          floating
-          size="small"
-          circular
-          className="header__notification--label"
-          content="3"
-        />
+        {label && (
+          <Label
+            floating
+            size="small"
+            circular
+            className="header__notification--label"
+            content="3"
+          />
+        )}
         <Popup
           trigger={
             <img
